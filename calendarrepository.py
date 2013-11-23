@@ -1,6 +1,5 @@
 '''
 Created on Nov 6, 2013
-
 @author: bradlangel
 '''
 import httplib2
@@ -21,7 +20,6 @@ class CalendarRepository():
     '''
     classdocs
     '''
-
 
     def __init__(self):
         '''
@@ -87,7 +85,8 @@ class CalendarRepository():
                             eventStart = dateTime(event['start']['dateTime'])                            
                             if today in eventStart.Date:
                                 eventEnd = dateTime(event['end']['dateTime'])
-                                events.append(Event(event['summary'], 
+                                events.append(Event(event['summary'],
+                                                    event['description'], 
                                                     eventStart.Date, 
                                                     eventStart.Time, 
                                                     eventEnd.Date, 

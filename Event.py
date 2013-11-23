@@ -8,11 +8,12 @@ class Event():
     '''
     classdocs
     '''
-    def __init__(self, summary, startDate, startTime, endDate, endTime):
+    def __init__(self, summary, description, startDate, startTime, endDate, endTime):
         '''
         Constructor
         '''
         self.summary = summary
+        self.description = description
         self.startDate = startDate
         self.start = startTime
         self.end = endTime
